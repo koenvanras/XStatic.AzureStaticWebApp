@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ContentTargetFolders>.</ContentTargetFolders>
+		<Product>xStatic.AzureStaticWebApp</Product>
+		<Title>xStatic.AzureStaticWebApp</Title>
+		<Version>15.0.0</Version>
+		<Description>Azure Static Web App deployer extension for Umbraco xStatic.</Description>
+		<PackageTags>umbraco umbraco15 xstatic static site generation azure umbraco-marketplace</PackageTags>
+		<Copyright>Koen van Ras-Neve</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageProjectUrl />
+		<RepositoryUrl>https://github.com/koenvanras/XStatic.AzureStaticWebApp</RepositoryUrl>
+		<RepositoryType>Git</RepositoryType>
+		<PackageIconUrl />
+		<Authors>Koen van Ras-Neve</Authors>
+		<Company>Apparare</Company>
+		<PackageIconUrl />
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.ResourceManager.AppService" Version="1.3.0" />
+		<PackageReference Include="xStatic.Core" Version="15.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="App_Plugins\XStatic.AzureStaticWebApp\**\*.*">
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+</Project>
